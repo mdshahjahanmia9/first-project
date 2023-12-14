@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+<style>
+
+body {
+  background-color:rgb(255, 0, 13);
+}
+#myDIV {
+  background-color:black;
+  width: 100%;
+  height: 300px;
+}
+
+#myDIV div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 500px;}
+}
+@keyframes myothermove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+@keyframes mylastmove {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
+#star {
+  fill: lime;
+  fill-rule: evenodd;
+  stroke: purple;
+  stroke-width: 8px;
+  paint-order: markers stroke fill;
+} 
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+
+
+<body>
+<h1>The animation Property</h1>
+
+<div id="myDIV">
+  <div></div>
+</div>
+<h1>The paint-order Property</h1>
+
+<p>Normal paint order is fill, stroke, markers.</p>
+
+<svg width="250" height="250">
+  <marker
+    id="dot"
+    viewBox="0 0 10 10"
+    refX="5"
+    refY="5"
+    markerWidth="5"
+    markerHeight="5">
+    <circle cx="5" cy="5" r="5" fill="red" />
+  </marker>
+  <polygon 
+    id="star" 
+    points="120,30 60,218 210,98 30,98 180,218"
+    marker-mid="url(#dot)"
+    marker-end="url(#dot)"/>
+</svg>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
